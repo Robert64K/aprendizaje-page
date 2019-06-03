@@ -1,0 +1,131 @@
+{% extends 'pages/menu.html' %}
+
+{% load static %}
+
+{% block contentmenu %}
+<!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'cursos' %}">Índice</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'clases' %}">Clases</a>
+                        </li>
+                        <li class="active">
+                            Captura de pantalla
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Page Video -->
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1>
+                            Captura de pantalla
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <div class="page-header position-relative">
+                        <div class="header-title">
+                            <h1>
+                                Recurso de aprendizaje (PDF)
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <a href="{% url 'download_imagen' %}" target="_blank"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                SMRecorder...
+                            </div>
+                        </div></a>
+                        <a href="{% url 'download_imagen' %}" target="_blank"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                El Resto...
+                            </div>
+                        </div></a>
+                    </div>
+                    <div class="page-header position-relative">
+                        <div class="header-title">
+                            <h1>
+                                Recurso de aprendizaje (Videos)
+                            </h1>
+                        </div>
+                    </div>
+                 <div class="row">
+                        <a href="{% url 'material_de_estudios' %}"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Material de estudios
+                                </div>
+                                Tema 1
+                            </div>
+                        </div></a>
+                        <a href="{% url 'grabacion_en_SMRecorder' %}"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Grabación en SMRecorder
+                                </div>
+                                Tema 2
+                            </div>
+                        </div></a>
+                        <a href="{% url 'captura_clase_final' %}"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Clase final
+                                </div>
+                                Tema 3
+                            </div>
+                        </div></a>
+                    </div>
+                    
+                    <div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1>
+                            Conocimiento relacionado
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                        <a href="#"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Video
+                                </div>
+                                Tema 1
+                            </div>
+                        </div></a>
+                        <a href="#"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Audio
+                                </div>
+                                Tema 2
+                            </div>
+                        </div></a> 
+                    </div>
+
+                </div>
+                <!-- /Page Body -->
+{% endblock %}

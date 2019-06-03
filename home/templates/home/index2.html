@@ -1,0 +1,176 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- /Carrousel Image -->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!--Indicador -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{% static 'assets/imagenes/clases1.jpg' %}">
+            </div>
+
+            <div class="item">
+                <img src="{% static 'assets/imagenes/clases2.png' %}">
+            </div>
+
+            <div class="item">
+                <img src="{% static 'assets/imagenes/clases3.jpg' %}">
+            </div>
+        </div>
+
+        <!-- Izquierda derecha controles -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Siguiente</span>
+        </a>
+    </div>
+
+    <!-- /END Carrousel -->
+
+    <!--Tabla Principal -->
+
+    <div class="page-body">
+        {% if temas %}
+            {% for tema in temas %}
+                {% if forloop.counter0 is 0 or forloop.counter0 is 3 or forloop.counter0 is 6 %}
+                    <div class="row">
+                {% endif %}
+                <a href="{% url tema.urlname %}">
+                <div class="col-xs-12 col-md-4">
+                    <div class="well with-header"> <!--  with-footer -->
+                        <div class="header bg-themeprimary">
+                        {{ tema.titulo  }}    
+                        </div>
+                        <!--<div class="imagen-responsive-div">
+                        <img class="imagen-responsive-img" height="150" width="400" src="{% static tema.imagen %}">
+                        </div>-->
+                        <img class="imagen-responsive-img" height="150" width="400" src="{% static tema.imagen %}">
+                    </div>
+                </div>
+                </a>
+                {% if forloop.counter0 is 2 or forloop.counter0 is 5 or forloop.counter0 is 8 %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+            {% if temas.count != 3 and temas.count != 6 and temas.count != 9 %}
+                </div>
+            {% endif %}
+        {% else %}
+        <div class="row">
+            <div class="col-xs-12 col-md-4">
+                <div class="well with-header  with-footer">
+                    <div class="header bg-themeprimary">
+                        No hay ningun dato
+                    </div>
+                    SIN DATOS
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <!-- /Tabla Principal -->
+
+    <!-- Footer Pie de pagina -->
+
+    <!-- Footer -->
+    <footer class="page-footer bg-themeprimary font-small white pt-4">
+
+        <!-- Footer Links -->
+        <div class="container-fluid text-center text-md-left">
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-6 mt-md-0 mt-3">
+
+                    <!-- Content -->
+                    <h5 class="text-uppercase">Contactanos</h5>
+                    <p>Email: ejemplo@recapr.com</p>
+                    <p>Numero: 555-555-5555</p>
+
+                </div>
+                <!-- Grid column -->
+
+                <hr class="clearfix w-100 d-md-none pb-3">
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 mb-md-0 mb-3">
+
+                    <!-- Links -->
+                    <h5 class="text-uppercase">Links</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 1</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 2</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 3</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-dark bg-white">Link 4</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- Grid column -->
+
+            </div>
+            <!-- Grid row -->
+
+        </div>
+        <!-- Footer Links -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:  recursodeaprendizaje.com
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+    <!-- /Footer Pie de pagina -->
+
+{% endblock %}

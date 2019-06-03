@@ -1,0 +1,131 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="page-body">
+	<div class="page-header position-relative">
+                        <div class="header-title">
+                            <h1>
+                                Material de Clases
+                            </h1>
+                        </div>
+                    </div>
+	<div class="row">
+		<div class="col-xs-12 col-md-4">
+			<ul class="list-group list-group-flush">
+                        <h5><a href="{% url 'clases' %}"><li class="list-group-item" type="disc"><b>Clases</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="{% url 'pizarron_de_cristal' %}"><li class="list-group-item">Pizarrón de cristal</li></a>
+                            <a href="{% url 'pizarron' %}"><li class="list-group-item">Pizarrón</li></a>
+                            <a href="{% url 'cuaderno' %}"><li class="list-group-item">Cuaderno</li></a>
+                            <a href="{% url 'captura_de_pantalla' %}"><li class="list-group-item">Captura de pantalla</li></a>
+                            <a href="{% url 'presentacion_estatica' %}"><li class="list-group-item">Presentación estática</li></a>
+                            <a href="#"><li class="list-group-item">Presentación dinámica</li></a>
+                            <a href="{% url 'multipantalla' %}"><li class="list-group-item">Multipantalla</li></a>
+                            <a href="{% url 'aula' %}"><li class="list-group-item">Aula</li></a>
+                            </h6>
+                        </ul>
+                    </ul>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<ul class="list-group list-group-flush">
+				<h5><a href="#"><li class="list-group-item" type="disc"><b>Evaluaciones</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="#"><li class="list-group-item">Examen</li></a>
+                            </h6>
+                        </ul>
+                        <h5><a href="#"><li class="list-group-item" type="disc"><b>Foros y chats</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="#"><li class="list-group-item">Chats</li></a>
+                            <a href="#"><li class="list-group-item">Foros</li></a>
+                            </h6>
+                        </ul>
+                        <h5><a href="#"><li class="list-group-item" type="disc"><b>Clases en vivo</b></li></a></h5>
+                        
+			</ul>
+		</div>
+		<div class="col-xs-12 col-md-4">
+			<ul class="list-group list-group-flush">
+                        <h5><a href="#"><li class="list-group-item" type="disc"><b>Transmisión en vivo</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="#"><li class="list-group-item">Facebook live</li></a>
+                            </h6>
+                        </ul>
+                        <h5><a href="#"><li class="list-group-item" type="disc"><b>Videoconferencia</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="#"><li class="list-group-item">Skype</li></a>
+                            <a href="#"><li class="list-group-item">Appear</li></a>
+                            <a href="#"><li class="list-group-item">Google Hangouts</li></a>
+                            </h6>
+                        </ul>
+			</ul>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			<div class="page-header position-relative">
+                        <div class="header-title">
+                            <h1>
+                                Material de Apoyo
+                            </h1>
+                        </div>
+            </div>
+			<ul class="list-group list-group-flush">
+				<h5><a href="#"><li class="list-group-item" type="disc"><b>Modelos, técnicas gráficas</b></li></a></h5>
+                <h5><a href="#"><li class="list-group-item" type="disc"><b>Video</b></li></a></h5>
+                <h5><a href="#"><li class="list-group-item" type="disc"><b>Audio</b></li></a></h5>
+                <h5><a href="{% url 'imagen' %}"><li class="list-group-item" type="disc"><b>Imágenes</b></li></a></h5>
+			</ul>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<div class="page-header position-relative">
+                        <div class="header-title">
+                            <h1>
+                                Material Didáctico
+                            </h1>
+                        </div>
+            </div>
+			<ul class="list-group list-group-flush">
+                        <h5><a href="#"><li class="list-group-item" type="disc"><b>Repositorio de archivos</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="#"><li class="list-group-item">Dropbox</li></a>
+                            <a href="#"><li class="list-group-item">Google Drive</li></a>
+                            <a href="#"><li class="list-group-item">Mega</li></a>
+                            </h6>
+                        </ul>
+						<h5><a href="#"><li class="list-group-item" type="disc"><b>Repositorio de videos</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="#"><li class="list-group-item">Youtube</li></a>
+                            </h6>
+                        </ul>
+                        <h5><a href="#"><li class="list-group-item" type="disc"><b>Herramientas</b></li></a></h5>
+                        <ul>
+                            <h6>
+                            <a href="#"><li class="list-group-item">Plataformas educativas, gestión del aprendizaje</li></a>
+                            <a href="#"><li class="list-group-item">Redes sociales</li></a>
+                            <a href="#"><li class="list-group-item">Chats</li></a>
+                            <a href="#"><li class="list-group-item">Edición de video</li></a>
+                            <a href="#"><li class="list-group-item">Clases en vivo</li></a>
+                            <a href="#"><li class="list-group-item">Videos didácticos educativos animados</li></a>
+                            <a href="#"><li class="list-group-item">Presentaciones (Power point, Prezi, Sway...)</li></a>
+                            <a href="#"><li class="list-group-item">Videos de captura de pantalla de computadora</li></a>
+                            <a href="#"><li class="list-group-item">Edición de audio</li></a>
+                            </h6>
+                        </ul>
+			</ul>
+		</div>
+	</div>
+</div>
+
+    
+
+{% endblock %}

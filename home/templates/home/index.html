@@ -1,0 +1,17 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<style type="text/css">
+    
+    html, body, div, iframe {margin: 0; padding: 0; height: 94%}
+    iframe {display: block; width: 100%; border: none;}
+</style>
+
+<iframe src="{% url 'main' %}"></iframe>
+
+    
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends 'pages/menu.html' %}
+
+{% load static %}
+
+{% block contentmenu %}
+<!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'cursos' %}">Índice</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'clases' %}">Clases</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'pizarron' %}">Pizarrón</a>
+                        </li>
+                        <li class="active">
+                            Pizarrón pequeño
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Page Video -->
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1>
+                            Pizarrón pequeño
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <!-- Your Content Goes Here  width="720" height="405"-->
+                    <div class="row">
+                    <div class="video-centrar-box">
+                        <div class="col-xs-12 col-md-8" style="margin-top: 25px;">
+                            <div class="video-responsive">
+                                <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/yqDbCXyX7bo?autoplay=1&disablekb=1&modestbranding=1&iv_load_policy=3&rel=0" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        
+                    </div>
+
+                </div>
+                <!-- /Page Body -->
+{% endblock %}

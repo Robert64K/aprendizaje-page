@@ -1,0 +1,72 @@
+{% extends 'pages/menu.html' %}
+
+{% load static %}
+
+{% block contentmenu %}
+            	<!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li class="active">Busqueda</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1>
+                            Resultados de "{{ tema }}"
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <!-- Your Content Goes Here -->
+                    {% if busqueda %}
+            {% for tema in busqueda %}
+                {% if forloop.counter0 is 0 or forloop.counter0 is 3 or forloop.counter0 is 6 %}
+                    <!--<div class="row">-->
+                {% endif %}
+                <a href="{% url tema.urlname %}">
+                <div class="col-xs-12 col-md-4">
+                    <div class="well with-header"> <!--  with-footer -->
+                        <div class="header bg-themeprimary">
+                        {{ tema.titulo  }}    
+                        </div>
+                        <!--<div class="imagen-responsive-div">
+                        <img class="imagen-responsive-img" height="150" width="400" src="{% static tema.imagen %}">
+                        </div>-->
+                        <img class="imagen-responsive-img" height="150" width="400" src="{% static tema.imagen %}">
+                    </div>
+                </div>
+                </a>
+                {% if forloop.counter0 is 2 or forloop.counter0 is 5 or forloop.counter0 is 8 %}
+                    <!--</div>-->
+                {% endif %}
+            {% endfor %}
+            {% if busqueda.count != 3 and busqueda.count != 6 and busqueda.count != 9 %}
+                <!--</div>-->
+            {% endif %}
+        {% else %}
+        <h4>No se han encontrado resultados.</h4>
+        {% endif %}
+                </div>
+                <!-- /Page Body -->
+    			{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'pages/menu.html' %}
+
+{% load static %}
+
+{% block contentmenu %}
+<!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'cursos' %}">Índice</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'clases' %}">Clases</a>
+                        </li>
+                        <li class="active">
+                            Multipantalla
+                        </li>
+                    </ul>
+                </div>
+                <!-- /Page Video -->
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1>
+                            Multipantalla
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <div class="row">
+                        <a href="{% url 'dimensiones_estructura_costo' %}"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Dimensiones, estructura, costo
+                                </div>
+                                Tema 1
+                            </div>
+                        </div></a>
+                        <a href="{% url 'estudio' %}"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Estudio
+                                </div>
+                                Tema 2
+                            </div>
+                        </div></a>
+                        <a href="{% url 'plumones' %}"><div class="col-xs-12 col-md-4">
+                            <div class="well with-header  with-footer">
+                                <div class="header bg-themeprimary">
+                                    Plumones
+                                </div>
+                                Tema 3
+                            </div>
+                        </div></a>
+                    </div>
+                </div>
+                <!-- /Page Body -->
+{% endblock %}

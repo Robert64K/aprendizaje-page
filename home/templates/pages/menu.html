@@ -1,0 +1,295 @@
+{% extends 'home/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Main Container -->
+    <div class="main-container container-fluid">
+        <!-- Page Container -->
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header
+                <div class="sidebar-header-wrapper">
+                    <input type="text" class="searchinput" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+                </div>
+                 /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+                <ul class="nav sidebar-menu">
+                    <!--Dashboard-->
+                    <li>
+                        <a href="{% url 'home' %}">
+                            <i class="menu-icon glyphicon glyphicon-home"></i>
+                            <span class="menu-text"> Inicio </span>
+                        </a>
+                    </li>
+                    <!--Clases-->
+                    <li>
+                        <a href="{% url 'clases' %}">
+                            <i class="menu-icon fa fa-book"></i>
+                            <span class="menu-text"> Clases </span>
+                        </a>
+                    </li>
+                    <!--Evaluaciones-->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-edit"></i>
+                            <span class="menu-text"> Evaluaciones </span>
+                        </a>
+                    </li>
+                    <!--Foros-->
+                    <li>
+                        <a href="{% url 'forosychats' %}">
+                            <i class="menu-icon fa fa-comments"></i>
+                            <span class="menu-text"> Foros y Chats </span>
+                        </a>
+                    </li>
+                    <!--Databoxes-->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-group"></i>
+                            <span class="menu-text"> Clases en vivo </span>
+                        </a>
+                    </li>
+                    <!--Charts-->
+                    <li>
+                        <a href="{% url 'videoconferencias' %}">
+                            <i class="menu-icon fa fa-skype"></i>
+                            <span class="menu-text"> Videoconferencias </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-video-camera"></i>
+                            <span class="menu-text"> Transmisión en vivo </span>
+                        </a>
+                    </li>
+                    <!--Widgets-->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-area-chart"></i>
+                            <span class="menu-text"> Modelos, técnicas gráficas </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-file-movie-o"></i>
+                            <span class="menu-text"> Video </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-file-audio-o"></i>
+                            <span class="menu-text"> Audio </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'imagen' %}">
+                            <i class="menu-icon fa fa-file-image-o"></i>
+                            <span class="menu-text"> Imagenes </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-paperclip"></i>
+                            <span class="menu-text"> Repositorio de archivos </span>
+                        </a>
+                    </li>
+                    <!--Mail-->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-toggle-right"></i>
+                            <span class="menu-text"> Repositorio de videos </span>
+                        </a>
+                    </li>
+                    <!--Pages-->
+                    <li>
+                        <a href="#">
+                            <i class="menu-icon fa fa-wrench"></i>
+                            <span class="menu-text"> Herramientas </span>
+                        </a>
+                    </li>
+                    <!--<li>
+                        <a href="{% url 'home' %}">
+                            <i class="menu-icon glyphicon glyphicon-book themesecondary"></i>
+                            <span class="menu-text">
+                                recursodeaprendizaje.com
+                            </span>
+                        </a>
+                    </li>-->
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+            
+            <!-- Page Content -->
+            <div class="page-content">
+            	{% block contentmenu %}
+            	<!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="{% url 'home' %}">Inicio</a>
+                        </li>
+                        <li class="active">Índice</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+                <!-- Page Header -->
+                <div class="page-header position-relative">
+                    <div class="header-title">
+                        <h1>
+                            Índice
+                        </h1>
+                    </div>
+                    <!--Header Buttons-->
+                    <div class="header-buttons">
+                        <a class="sidebar-toggler" href="#">
+                            <i class="fa fa-arrows-h"></i>
+                        </a>
+                        <a class="refresh" id="refresh-toggler" href="">
+                            <i class="glyphicon glyphicon-refresh"></i>
+                        </a>
+                        <a class="fullscreen" id="fullscreen-toggler" href="#">
+                            <i class="glyphicon glyphicon-fullscreen"></i>
+                        </a>
+                    </div>
+                    <!--Header Buttons End-->
+                </div>
+                <!-- /Page Header -->
+                <!-- Page Body -->
+                <div class="page-body">
+                    <!-- Your Content Goes Here -->
+                    <div class="page-header position-relative">
+                        <div class="header-title">
+                            <h1>
+                                Material de Clases
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-4">
+                            <ul class="list-group list-group-flush">
+                                <h5><a href="{% url 'clases' %}"><li class="list-group-item" type="disc"><b>Clases</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="{% url 'pizarron_de_cristal' %}"><li class="list-group-item">Pizarrón de cristal</li></a>
+                                    <a href="{% url 'pizarron' %}"><li class="list-group-item">Pizarrón</li></a>
+                                    <a href="{% url 'cuaderno' %}"><li class="list-group-item">Cuaderno</li></a>
+                                    <a href="{% url 'captura_de_pantalla' %}"><li class="list-group-item">Captura de pantalla</li></a>
+                                    <a href="{% url 'presentacion_estatica' %}"><li class="list-group-item">Presentación estática</li></a>
+                                    <a href="#"><li class="list-group-item">Presentación dinámica</li></a>
+                                    <a href="{% url 'multipantalla' %}"><li class="list-group-item">Multipantalla</li></a>
+                                    <a href="{% url 'aula' %}"><li class="list-group-item">Aula</li></a>
+                                    </h6>
+                                </ul>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <ul class="list-group list-group-flush">
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Evaluaciones</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="#"><li class="list-group-item">Examen</li></a>
+                                    </h6>
+                                </ul>
+                                <h5><a href="{% url 'forosychats' %}"><li class="list-group-item" type="disc"><b>Foros y chats</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="{% url 'chats' %}"><li class="list-group-item">Chats</li></a>
+                                    <a href="#"><li class="list-group-item">Foros</li></a>
+                                    </h6>
+                                </ul>
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Clases en vivo</b></li></a></h5>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-md-4">
+                            <ul class="list-group list-group-flush">
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Transmisión en vivo</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="#"><li class="list-group-item">Facebook live</li></a>
+                                    </h6>
+                                </ul>
+                                <h5><a href="{% url 'videoconferencias' %}"><li class="list-group-item" type="disc"><b>Videoconferencia</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="#"><li class="list-group-item">Skype</li></a>
+                                    <a href="#"><li class="list-group-item">Appear</li></a>
+                                    <a href="#"><li class="list-group-item">Google Hangouts</li></a>
+                                    </h6>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="page-header position-relative">
+                                <div class="header-title">
+                                    <h1>
+                                        Material de Apoyo
+                                    </h1>
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Modelos, técnicas gráficas</b></li></a></h5>
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Video</b></li></a></h5>
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Audio</b></li></a></h5>
+                                <h5><a href="{% url 'imagen' %}"><li class="list-group-item" type="disc"><b>Imágenes</b></li></a></h5>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="page-header position-relative">
+                                <div class="header-title">
+                                    <h1>
+                                        Material Didáctico
+                                    </h1>
+                                </div>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Repositorio de archivos</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="#"><li class="list-group-item">Dropbox</li></a>
+                                    <a href="#"><li class="list-group-item">Google Drive</li></a>
+                                    <a href="#"><li class="list-group-item">Mega</li></a>
+                                    </h6>
+                                </ul>
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Repositorio de videos</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="#"><li class="list-group-item">Youtube</li></a>
+                                    </h6>
+                                </ul>
+                                <h5><a href="#"><li class="list-group-item" type="disc"><b>Herramientas</b></li></a></h5>
+                                <ul>
+                                    <h6>
+                                    <a href="#"><li class="list-group-item">Plataformas educativas, gestión del aprendizaje</li></a>
+                                    <a href="#"><li class="list-group-item">Redes sociales</li></a>
+                                    <a href="#"><li class="list-group-item">Chats</li></a>
+                                    <a href="#"><li class="list-group-item">Edición de video</li></a>
+                                    <a href="#"><li class="list-group-item">Clases en vivo</li></a>
+                                    <a href="#"><li class="list-group-item">Videos didácticos educativos animados</li></a>
+                                    <a href="#"><li class="list-group-item">Presentaciones (Power point, Prezi, Sway...)</li></a>
+                                    <a href="#"><li class="list-group-item">Videos de captura de pantalla de computadora</li></a>
+                                    <a href="#"><li class="list-group-item">Edición de audio</li></a>
+                                    </h6>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Body -->
+    			{% endblock %}
+        	</div>
+        	<!-- /Page Container -->
+<!-- Main Container -->
+        </div>
+        <!-- /Page Content -->
+    </div>
+
+{% endblock %}
