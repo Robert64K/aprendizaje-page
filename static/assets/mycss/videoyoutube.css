@@ -1,0 +1,83 @@
+.video-responsive {
+position: relative;
+padding-bottom: 56.25%; /* 16/9 ratio */
+padding-top: 30px; /* IE6 workaround*/
+height: 0;
+overflow: hidden;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+
+.video-centrar-box{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+}
+
+.imagen-responsive-div{
+	width: 96%;
+	max-width: 400px;
+}
+
+.imagen-responsive-img{
+	width: 100%;
+	height: auto;
+}
+
+.ir-arriba {
+	z-index: 1;
+	display:none;
+	padding:20px;
+	background: none;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (device-aspect-ratio: 16/9) { /* pantallas 16/9 */
+	.volador {
+	z-index: 2;
+	position: relative;
+	padding: 20px;
+	right: 0px;
+	bottom: 10%;
+	}
+}
+
+@media (orientation:portrait) { /* para pantallas más altas que anchas */
+	.volador {
+	z-index: 2;
+	position: relative;
+	padding: 20px;
+	right: 0px;
+	bottom: 115%;
+	}
+}
+
+@media (orientation:landscape) and (max-width: 1000px) { /* para pantallas más anchas que altas */
+	.volador {
+	z-index: 2;
+	position: relative;
+	padding: 20px;
+	right: 0px;
+	bottom: 135%;
+	}
+}
+
+
+
