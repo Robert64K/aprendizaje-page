@@ -311,6 +311,61 @@
 </div>
 
 </div>-->
+
+    <div class="popular page_section">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="section_title text-center">
+                        <div id="primernivel">
+                        <h1>Visión, misión y objetivos</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row course_boxes">
+                
+                <!-- Popular Course Item -->
+                <div class="col-lg-4 course_box">
+                        <ul class="list-group">
+                          <center>
+                            <h3><li type="disc" class="list-group-item list-group-item-info"><b>Visión</b></li></h3>
+                          </center>
+                        <ul>
+                            <p style="color: #000;">Desarrollar  una  metodología y  repositorio  de  ejemplos para  la  generación  de  recursos  de  aprendizaje basados  en  producción  audiovisual y  tecnologías  de  información para  el  desarrollo  de  objetos  de aprendizaje  en  ambientes  educativos  educacionalesque  permita  modernizar  y  publicar  el  contenido educativo de profesores.</p>
+                        </ul>
+                        </ul>
+                </div>
+
+                <!-- Popular Course Item -->
+                <div class="col-lg-4 course_box">
+
+                        <ul>
+                          <center>
+                            <h3><li type="disc" class="list-group-item list-group-item-info"><b>Misión</b></li></h3>    
+                          </center>
+                        <ul>
+                            <p style="color: #000;">Desarrollar  una  metodología y  repositorio  de  ejemplos para  la  generación  de  recursos  de  aprendizaje basados  en  producción  audiovisual y  tecnologías  de  información para  el  desarrollo  de  objetos  de aprendizaje  en  ambientes  educativos  educacionalesque  permita  modernizar  y  publicar  el  contenido educativo de profesores.</p>
+                        </ul>
+                        </ul>
+                </div>
+
+                <!-- Popular Course Item -->
+                <div class="col-lg-4 course_box">
+                    <ul>
+                          <center>
+                            <h3><li type="disc" class="list-group-item list-group-item-info"><b>Objetivos</b></li></h3>
+                          </center>
+                        <ul>
+                            <p style="color: #000;">Desarrollar recursos de aprendizaje basados en: I. Clase, 2. Evaluación, 3. Forosy 4. Clase en vivo.Facilitar a los profesores de cualquier nivel educativo y disciplina la elaboración de objetos de aprendizaje basados  en  recursos  de  aprendizajeactuales  que  involucran  herramientas  y  producción  audiovisual compleja.Facilitar ejemplos a los profesores de publicación de contenidosen diferentes plataformas de internet y redes sociales.</p>
+                        </ul>   
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    </div>
+
     <!-- Footer -->
 
     <footer class="footer">
@@ -333,7 +388,7 @@
                             </div>
                         </div>
 
-                        <p class="footer_about_text">Esta pagina esta dedicada para enseñar a hacer cases en lineas.</p>
+                        <p class="footer_about_text">Esta pagina esta dedicada para enseñar a hacer clases en linea.</p>
 
                     </div>
 
@@ -341,13 +396,15 @@
                     <!-- Footer Column - Menu -->
 
                     <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Categoría 1</div>
+                        <div class="footer_column_title">Como dar una clase</div>
                         <div class="footer_column_content">
                             <ul>
-                                <li class="footer_list_item"><a href="#" target="_parent">Modelos, técnicas y gráficas</a></li>
-                                <li class="footer_list_item"><a href="#" target="_parent">Videos</a></li>
-                                <li class="footer_list_item"><a href="#" target="_parent">Audio</a></li>
-                                <li class="footer_list_item"><a href="#" target="_parent">Imágenes</a></li>
+                                <li class="footer_list_item"><a href="{% url 'clases' %}" target="_parent">Clases</a></li>
+                                <li class="footer_list_item"><a href="{% url 'home' %}" target="_parent">Evaluaciones</a></li>
+                                <li class="footer_list_item"><a href="{% url 'forosychats' %}" target="_parent">Foros y chats</a></li>
+                                <li class="footer_list_item"><a href="{% url 'home' %}" target="_parent">Clases en vivo</a></li>
+                                <li class="footer_list_item"><a href="{% url 'home' %}" target="_parent">Transmisión en vivo</a></li>
+                                <li class="footer_list_item"><a href="{% url 'home' %}" target="_parent">Videoconferencia</a></li>
                             </ul>
                         </div>
                     </div>
@@ -356,12 +413,13 @@
                     <!-- Footer Column - Menu -->
 
                     <div class="col-lg-3 footer_col">
-                        <div class="footer_column_title">Categoría 2</div>
+                        <div class="footer_column_title">Material de apoyo</div>
                         <div class="footer_column_content">
                             <ul>
-                                <li class="footer_list_item"><a href="#" target="_parent">Repositorio de archivos</a></li>
-                                <li class="footer_list_item"><a href="#" target="_parent">Repositorio de videos</a></li>
-                                <li class="footer_list_item"><a href="#" target="_parent">Herramientas</a></li>
+                                <li class="footer_list_item"><a href="{% url 'home' %}" target="_parent">Modelos, técnicas gráficas</a></li>
+                                <li class="footer_list_item"><a href="{% url 'home' %}" target="_parent">Video</a></li>
+                                <li class="footer_list_item"><a href="{% url 'home' %}" target="_parent">Audio</a></li>
+                                <li class="footer_list_item"><a href="{% url 'imagen' %}" target="_parent">Imágenes</a></li>
                             </ul>
                         </div>
                     </div>
@@ -401,13 +459,13 @@
             <div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
                 <div class="footer_copyright">
                     <span><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Plataforma Educativa TuxMapa 
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Plataforma Educativa Tecnodidactica 
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
                 </div>
                 <div class="footer_social ml-sm-auto">
                     <ul class="menu_social">
-                        <li class="menu_social_item"><a href="#" target="_parent"><i class="fab fa-facebook-f"></i></a></li>
-                        <li class="menu_social_item"><a href="#" target="_parent"><i class="fab fa-youtube"></i></a></li>
+                        <li class="menu_social_item"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="menu_social_item"><a href="https://www.youtube.com/channel/UCpWO7i10ThU9wu6UqiaXhYA/videos" target="_blank"><i class="fab fa-youtube"></i></a></li>
                     </ul>
                 </div>
             </div>
