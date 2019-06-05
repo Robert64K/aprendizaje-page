@@ -1,8 +1,10 @@
 {% load static %}
+{% load analytical %}
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    {% analytical_head_top %}
 	<meta charset="utf-8" />
 	<title>Recursos de Aprendizaje</title>
 
@@ -36,20 +38,10 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'assets/mycss/videoyoutube.css' %}"/>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141344261-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-141344261-1');
-</script>
-
-
+    {% analytical_head_bottom %}
 </head>
 <body>
-
+    {% analytical_body_top %}
 	<!-- Loading Container -->
     <div class="loading-container">
         <div class="loader"></div>
@@ -556,6 +548,6 @@
         });
 
     </script>
-
+    {% analytical_body_bottom %}
 </body>
 </html>
